@@ -63,7 +63,7 @@ func (conn *Connection) getReceiptRaw(bn uint64, txid uint64) (receipt *types.Ra
 		return nil, base.Hash{}, err
 
 	} else {
-		method := "eth_getTransactionReceipt"
+		method := "zond_getTransactionReceipt"
 		params := query.Params{txHash}
 
 		if receipt, err := query.Query[types.RawReceipt](conn.Chain, method, params); err != nil {
@@ -114,10 +114,10 @@ func (conn *Connection) GetReceiptsByNumber(bn base.Blknum, ts base.Timestamp) (
 	}
 }
 
-// getReceiptsSimple fetches receipts from the RPC using eth_getBlockReceipts. It returns
+// getReceiptsSimple fetches receipts from the RPC using zond_getBlockReceipts. It returns
 // an array of SimpleReceipts with the timestamp set to the block timestamp.
 func (conn *Connection) getReceiptsSimple(bn base.Blknum) ([]types.SimpleReceipt, error) {
-	method := "eth_getBlockReceipts"
+	method := "zond_getBlockReceipts"
 	params := query.Params{fmt.Sprintf("0x%x", bn)}
 
 	if rawReceipts, err := query.Query[[]types.RawReceipt](conn.Chain, method, params); err != nil {

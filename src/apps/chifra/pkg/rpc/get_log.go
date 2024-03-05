@@ -75,7 +75,7 @@ func (conn *Connection) getLogsSimple(filter types.SimpleLogFilter) ([]types.Sim
 		p.Topics = append(p.Topics, topic.Hex())
 	}
 
-	method := "eth_getLogs"
+	method := "zond_getLogs"
 	params := query.Params{p}
 
 	if rawLogs, err := query.Query[[]types.RawLog](conn.Chain, method, params); err != nil {

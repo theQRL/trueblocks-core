@@ -65,7 +65,7 @@ func (conn *Connection) GetContractProxyAt(address base.Address, blockNumber bas
 	} else {
 		defer ec.Close()
 
-		method := "eth_call"
+		method := "zond_call"
 		params := query.Params{
 			map[string]any{
 				"to": address,

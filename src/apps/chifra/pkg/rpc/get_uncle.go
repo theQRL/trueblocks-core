@@ -25,7 +25,7 @@ func (conn *Connection) GetUncleBodiesByNumber(bn uint64) ([]types.SimpleBlock[t
 	} else {
 		ret := make([]types.SimpleBlock[types.SimpleTransaction], 0, count)
 		for i := uint64(0); i < count; i++ {
-			method := "eth_getUncleByBlockNumberAndIndex"
+			method := "zond_getUncleByBlockNumberAndIndex"
 			params := query.Params{
 				fmt.Sprintf("0x%x", bn),
 				fmt.Sprintf("0x%x", i),
@@ -62,7 +62,7 @@ func (conn *Connection) GetUnclesHashesByNumber(bn uint64) ([]base.Hash, error) 
 	} else {
 		ret := make([]base.Hash, 0, count)
 		for i := uint64(0); i < count; i++ {
-			method := "eth_getUncleByBlockNumberAndIndex"
+			method := "zond_getUncleByBlockNumberAndIndex"
 			params := query.Params{
 				fmt.Sprintf("0x%x", bn),
 				fmt.Sprintf("0x%x", i),
@@ -85,7 +85,7 @@ func (conn *Connection) GetUnclesCountInBlock(bn uint64) (uint64, error) {
 		return 0, nil
 	}
 
-	method := "eth_getUncleCountByBlockNumber"
+	method := "zond_getUncleCountByBlockNumber"
 	params := query.Params{fmt.Sprintf("0x%x", bn)}
 
 	if count, err := query.Query[string](conn.Chain, method, params); err != nil {

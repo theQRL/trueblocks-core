@@ -267,7 +267,7 @@ func loadBlock[Tx string | types.SimpleTransaction](conn *Connection, bn uint64,
 
 // getBlockRaw returns the raw block as received from the node
 func (conn *Connection) getBlockRaw(bn uint64, withTxs bool) (*types.RawBlock, error) {
-	method := "eth_getBlockByNumber"
+	method := "zond_getBlockByNumber"
 	params := query.Params{fmt.Sprintf("0x%x", bn), withTxs}
 
 	if block, err := query.Query[types.RawBlock](conn.Chain, method, params); err != nil {

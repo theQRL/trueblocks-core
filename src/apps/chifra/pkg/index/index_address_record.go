@@ -7,7 +7,7 @@ import (
 	"io"
 	"sort"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
 )
 
 const (

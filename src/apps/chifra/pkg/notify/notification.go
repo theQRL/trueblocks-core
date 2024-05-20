@@ -1,6 +1,6 @@
 package notify
 
-import "github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/rpc"
+import "github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/rpc"
 
 type Message string
 

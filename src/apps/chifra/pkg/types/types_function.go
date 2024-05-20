@@ -16,9 +16,9 @@ import (
 	"io"
 	"strings"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/cache"
-	"github.com/ethereum/go-ethereum/accounts/abi"
+	"github.com/theQRL/go-zond/accounts/abi"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/cache"
 )
 
 // `payable` was present in ABIs before Solidity 0.5.0 and was replaced by `stateMutability`

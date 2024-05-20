@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
-	"github.com/ethereum/go-ethereum/accounts/abi"
+	"github.com/theQRL/go-zond/accounts/abi"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
 )
 
 func TestFunctionToAbiMethod(t *testing.T) {

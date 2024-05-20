@@ -7,7 +7,7 @@ import (
 	"io"
 	"strconv"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/version"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/version"
 )
 
 // Here we define a struct that we want to write or read from the cache

@@ -3,8 +3,8 @@ package decode
 import (
 	"fmt"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
-	goAbi "github.com/ethereum/go-ethereum/accounts/abi"
+	goAbi "github.com/theQRL/go-zond/accounts/abi"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
 )
 
 // TODO: Why can't we just use the call package to call into the token directly? Answer: this code was built before the call package

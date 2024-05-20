@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/colors"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/colors"
 )
 
 func QueryUser(prompt, noResponse string) bool {

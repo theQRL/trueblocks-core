@@ -7,9 +7,9 @@ package validate
 import (
 	"strings"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/config"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/usage"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/config"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/usage"
 )
 
 func Usage(msg string, values ...string) error {
@@ -50,11 +50,11 @@ func ValidateAddresses(args []string) error {
 
 func ValidateExactlyOneAddr(args []string) error {
 	if err := ValidateAtLeastOneAddr(args); err != nil {
-		return Usage("Please specify a valid Ethereum address.")
+		return Usage("Please specify a valid zond address.")
 	}
 
 	if len(args) > 1 {
-		return Usage("Please specify only a single Ethereum address.")
+		return Usage("Please specify only a single zond address.")
 	}
 
 	if !base.IsValidAddress(args[0]) {
@@ -87,7 +87,7 @@ func ValidateAtLeastOneAddr(args []string) error {
 	if hasOne {
 		return nil
 	}
-	return Usage("Please specify at least one {0}.", "valid Ethereum address")
+	return Usage("Please specify at least one {0}.", "valid zond address")
 }
 
 func ValidateEnum(field, value, valid string) error {

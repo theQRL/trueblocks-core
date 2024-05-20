@@ -7,8 +7,8 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/version"
 	"github.com/spf13/cobra"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/version"
 )
 
 // Make a copy of this so we don't have to import the version package in every file

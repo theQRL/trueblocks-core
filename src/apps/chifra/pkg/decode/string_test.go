@@ -3,7 +3,7 @@ package decode
 import (
 	"testing"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
 )
 
 func TestArticulateString(t *testing.T) {

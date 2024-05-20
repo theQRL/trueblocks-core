@@ -8,11 +8,11 @@ import (
 	"errors"
 	"path/filepath"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/config"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/file"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/index"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/logger"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/validate"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/config"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/file"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/index"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/logger"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/validate"
 )
 
 func (opts *MonitorsOptions) validateMonitors() error {
@@ -101,7 +101,7 @@ func (opts *MonitorsOptions) validateMonitors() error {
 			}
 
 			if !opts.Clean && len(opts.Addrs) == 0 {
-				return validate.Usage("You must provide at least one Ethereum address for this command.")
+				return validate.Usage("You must provide at least one zond address for this command.")
 			}
 
 			if !opts.Clean && !opts.Delete && !opts.Undelete && !opts.Remove && !opts.Globals.Decache {

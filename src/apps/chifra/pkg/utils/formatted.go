@@ -9,11 +9,11 @@ import (
 	"strings"
 
 	"github.com/bykof/gostradamus"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/theQRL/go-zond/params"
 )
 
 func weiToEther(wei *big.Int) *big.Float {
-	// Copied from https://github.com/ethereum/go-ethereum/issues/21221#issuecomment-805852059
+	// Copied from https://github.com/theQRL/go-zond/issues/21221#issuecomment-805852059
 	f := new(big.Float)
 	f.SetPrec(236) //  IEEE 754 octuple-precision binary floating-point format: binary256
 	f.SetMode(big.ToNearestEven)

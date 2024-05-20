@@ -568,13 +568,13 @@ string_q get_ens_convert2(const CCommandOption& cmd) {
 string_q get_config_package(const CCommandOption& cmd) {
     for (auto p : *((CCommandOptionArray*)cmd.members))
         if (p.longName % "publisher" || p.generate == "config")
-            return "\t\"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/config\"\n";
+            return "\t\"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/config\"\n";
     return "";
 }
 
 string_q get_walk_package(const CCommandOption& cmd) {
     if (cmd.api_route == "status") {
-        return "\t\"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/walk\"\n";
+        return "\t\"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/walk\"\n";
     }
     return "";
 }
@@ -582,7 +582,7 @@ string_q get_walk_package(const CCommandOption& cmd) {
 string_q get_base_package(const string_q& fn) {
     string_q existing = asciiFileToString(fn);
     if (contains(existing, "base.")) {
-        return "\t\"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base\"\n";
+        return "\t\"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base\"\n";
     }
     return "";
 }
@@ -598,7 +598,7 @@ string_q get_os_package(const string_q& fn) {
 string_q get_index_package(const string_q& fn) {
     // string_q existing = asciiFileToString(fn);
     // if (contains(existing, "index.")) {
-    //     return "\t\"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/index\"\n";
+    //     return "\t\"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/index\"\n";
     // }
     return "";
 }
@@ -726,11 +726,11 @@ string_q clean_go_positionals(const string_q& in, bool hasRpc) {
     replaceAll(ret, "\t[]string{} = args\n", "");
     replaceAll(ret, "opts.[]string{}", "[]string{}");
     if (!contains(ret, "utils."))
-        replaceAll(ret, "\t\"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/utils\"\n", "");
+        replaceAll(ret, "\t\"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/utils\"\n", "");
     if (!contains(ret, "identifiers."))
-        replaceAll(ret, "\t\"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/identifiers\"\n", "");
+        replaceAll(ret, "\t\"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/identifiers\"\n", "");
     if (!hasRpc)
-        replaceAll(ret, "\t\"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/rpc\"\n", "");
+        replaceAll(ret, "\t\"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/rpc\"\n", "");
     return ret;
 }
 

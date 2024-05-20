@@ -8,10 +8,10 @@ import (
 	"context"
 	"errors"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/output"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/uniq"
-	"github.com/ethereum/go-ethereum"
+	"github.com/theQRL/go-zond"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/output"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/uniq"
 )
 
 func (opts *BlocksOptions) HandleCounts() error {
@@ -23,7 +23,7 @@ func (opts *BlocksOptions) HandleCounts() error {
 			blockNums, err := br.ResolveBlocks(chain)
 			if err != nil {
 				errorChan <- err
-				if errors.Is(err, ethereum.NotFound) {
+				if errors.Is(err, zond.NotFound) {
 					continue
 				}
 				cancel()
@@ -34,7 +34,7 @@ func (opts *BlocksOptions) HandleCounts() error {
 				var block types.SimpleBlock[string]
 				if block, err = opts.Conn.GetBlockHeaderByNumber(bn); err != nil {
 					errorChan <- err
-					if errors.Is(err, ethereum.NotFound) {
+					if errors.Is(err, zond.NotFound) {
 						continue
 					}
 					cancel()
@@ -51,7 +51,7 @@ func (opts *BlocksOptions) HandleCounts() error {
 				if opts.Uncles {
 					if blockCount.UnclesCnt, err = opts.Conn.GetUnclesCountInBlock(bn); err != nil {
 						errorChan <- err
-						if errors.Is(err, ethereum.NotFound) {
+						if errors.Is(err, zond.NotFound) {
 							continue
 						}
 						cancel()
@@ -62,7 +62,7 @@ func (opts *BlocksOptions) HandleCounts() error {
 				if opts.Traces {
 					if blockCount.TracesCnt, err = opts.Conn.GetTracesCountInBlock(bn); err != nil {
 						errorChan <- err
-						if errors.Is(err, ethereum.NotFound) {
+						if errors.Is(err, zond.NotFound) {
 							continue
 						}
 						cancel()
@@ -73,7 +73,7 @@ func (opts *BlocksOptions) HandleCounts() error {
 				if opts.Logs {
 					if blockCount.LogsCnt, err = opts.Conn.GetLogsCountInBlock(bn, block.Timestamp); err != nil {
 						errorChan <- err
-						if errors.Is(err, ethereum.NotFound) {
+						if errors.Is(err, zond.NotFound) {
 							continue
 						}
 						cancel()
@@ -89,7 +89,7 @@ func (opts *BlocksOptions) HandleCounts() error {
 
 					if err := uniq.GetUniqAddressesInBlock(chain, opts.Flow, opts.Conn, countFunc, bn); err != nil {
 						errorChan <- err
-						if errors.Is(err, ethereum.NotFound) {
+						if errors.Is(err, zond.NotFound) {
 							continue
 						}
 						cancel()

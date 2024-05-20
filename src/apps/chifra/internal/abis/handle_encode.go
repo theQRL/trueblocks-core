@@ -7,8 +7,8 @@ package abisPkg
 import (
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/theQRL/go-zond/common/hexutil"
+	"github.com/theQRL/go-zond/crypto"
 )
 
 func (opts *AbisOptions) HandleEncode() error {

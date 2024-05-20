@@ -5,7 +5,7 @@
 package tokensPkg
 
 import (
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/logger"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/logger"
 )
 
 func (opts *TokensOptions) HandleDecache() error {

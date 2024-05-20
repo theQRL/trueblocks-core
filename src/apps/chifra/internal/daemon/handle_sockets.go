@@ -9,8 +9,8 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/logger"
 	"github.com/gorilla/websocket"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/logger"
 )
 
 // MessageType is a message carried in a string

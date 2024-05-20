@@ -1,7 +1,7 @@
 package rpc
 
 import (
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
 )
 
 type Paginator struct {

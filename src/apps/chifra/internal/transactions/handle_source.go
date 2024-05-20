@@ -1,6 +1,6 @@
 package transactionsPkg
 
-import "github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/validate"
+import "github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/validate"
 
 func (opts *TransactionsOptions) HandleSeed() (err error) {
 	// logger.Warn("Sourcing of funds is currently not implemented. Please come back soon.")

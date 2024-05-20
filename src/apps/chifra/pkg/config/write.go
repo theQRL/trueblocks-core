@@ -4,7 +4,7 @@ import (
 	"os"
 
 	"github.com/BurntSushi/toml"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/version"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/version"
 )
 
 // writeFile writes the toml config file from the given struct

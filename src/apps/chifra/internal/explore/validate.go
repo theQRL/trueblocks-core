@@ -9,10 +9,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/config"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/validate"
-	"github.com/ethereum/go-ethereum"
+	"github.com/theQRL/go-zond"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/config"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/validate"
 )
 
 type ExploreType uint8
@@ -92,7 +92,7 @@ func (opts *ExploreOptions) validateExplore() error {
 			}
 			// An error here is not okay because we have a valid hash but it's not a valid on-chain
 			// thingy, so we must have been told why by the node
-			return fmt.Errorf("block at %s returned an error: %w", arg, ethereum.NotFound)
+			return fmt.Errorf("block at %s returned an error: %w", arg, zond.NotFound)
 		}
 
 		if validate.IsValidFourByte(arg) {

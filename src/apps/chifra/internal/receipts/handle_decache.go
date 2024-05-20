@@ -5,7 +5,7 @@
 package receiptsPkg
 
 import (
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/logger"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/logger"
 )
 
 func (opts *ReceiptsOptions) HandleDecache() error {

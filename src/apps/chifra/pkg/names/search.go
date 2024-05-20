@@ -3,7 +3,7 @@ package names
 import (
 	"regexp"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
 )
 
 func doSearch(name *types.SimpleName, terms []string, parts Parts) bool {

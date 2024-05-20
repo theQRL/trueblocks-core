@@ -3,7 +3,7 @@ package pinning
 import (
 	"fmt"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/config"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/config"
 )
 
 type ServiceType int

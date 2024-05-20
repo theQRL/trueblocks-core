@@ -4,7 +4,7 @@ import (
 	"errors"
 	"io"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/version"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/version"
 )
 
 // HeaderByteSize is the total size of a cache item's header in bytes.

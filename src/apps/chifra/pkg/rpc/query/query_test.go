@@ -13,7 +13,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/utils"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/utils"
 )
 
 func TestFromRpcCounter(t *testing.T) {
@@ -33,7 +33,7 @@ func TestFromRpcCounter(t *testing.T) {
 
 	for i := 0; i < 20; i++ {
 		payload := Payload{
-			Method: "eth_blockNumber",
+			Method: "zond_blockNumber",
 			Params: []interface{}{},
 		}
 		_, err := Query[string](utils.GetTestChain(), payload.Method, payload.Params)

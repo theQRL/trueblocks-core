@@ -3,7 +3,7 @@ package walk
 import (
 	"context"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/logger"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/logger"
 )
 
 type walkerFunc func(walker *CacheWalker, path string, first bool) (bool, error)

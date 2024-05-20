@@ -14,8 +14,8 @@
 package main
 
 import (
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/cmd"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/debug"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/cmd"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/debug"
 )
 
 func main() {

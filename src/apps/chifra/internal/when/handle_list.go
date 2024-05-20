@@ -4,10 +4,10 @@ import (
 	"context"
 	"errors"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/output"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/tslib"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
-	"github.com/ethereum/go-ethereum"
+	"github.com/theQRL/go-zond"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/output"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/tslib"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
 )
 
 func (opts *WhenOptions) HandleList() error {
@@ -18,7 +18,7 @@ func (opts *WhenOptions) HandleList() error {
 		results, err := tslib.GetSpecials(chain)
 		if err != nil {
 			errorChan <- err
-			if errors.Is(err, ethereum.NotFound) {
+			if errors.Is(err, zond.NotFound) {
 				return
 			}
 			cancel()

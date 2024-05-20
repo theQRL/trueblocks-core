@@ -8,11 +8,11 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/rpc/query"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/utils"
-	"github.com/ethereum/go-ethereum"
+	"github.com/theQRL/go-zond"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/rpc/query"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/utils"
 )
 
 // GetTracesByBlockNumber returns a slice of traces in the given block
@@ -142,7 +142,7 @@ func (conn *Connection) GetTracesByTransactionHash(txHash string, transaction *t
 
 	var ret []types.SimpleTrace
 	if rawTraces, err := query.Query[[]types.RawTrace](conn.Chain, method, params); err != nil {
-		return ret, ethereum.NotFound
+		return ret, zond.NotFound
 
 	} else if rawTraces == nil || len(*rawTraces) == 0 {
 		return []types.SimpleTrace{}, nil
@@ -240,7 +240,7 @@ func (conn *Connection) GetTracesByFilter(filter string) ([]types.SimpleTrace, e
 
 	var ret []types.SimpleTrace
 	if rawTraces, err := query.Query[[]types.RawTrace](conn.Chain, method, params); err != nil {
-		return ret, fmt.Errorf("trace filter %s returned an error: %w", filter, ethereum.NotFound)
+		return ret, fmt.Errorf("trace filter %s returned an error: %w", filter, zond.NotFound)
 
 	} else if rawTraces == nil || len(*rawTraces) == 0 {
 		return []types.SimpleTrace{}, nil

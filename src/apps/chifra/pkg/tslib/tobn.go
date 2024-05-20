@@ -3,10 +3,10 @@ package tslib
 import (
 	"fmt"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/rpc"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/utils"
-	"github.com/ethereum/go-ethereum"
+	"github.com/theQRL/go-zond"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/rpc"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/utils"
 )
 
 // FromDateToBn returns a chain-specific block number given a date string (date strings are valid JSON dates).
@@ -40,7 +40,7 @@ func FromNameToBn(chain, name string) (uint64, error) {
 		}
 	}
 
-	return uint64(utils.NOPOS), fmt.Errorf("block at %s returned an error: %w", name, ethereum.NotFound)
+	return uint64(utils.NOPOS), fmt.Errorf("block at %s returned an error: %w", name, zond.NotFound)
 }
 
 // FromTsToBn returns a chain-specific block number given a Linux timestamp.

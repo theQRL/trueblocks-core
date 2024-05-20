@@ -3,8 +3,8 @@ package cmd
 import (
 	"os"
 
-	abi "github.com/TrueBlocks/trueblocks-core/src/other/known_abi_gen/pkg/generator"
 	"github.com/spf13/cobra"
+	abi "github.com/theQRL/trueblocks-core/src/other/known_abi_gen/pkg/generator"
 )
 
 // rootCmd represents the base command when called without any subcommands

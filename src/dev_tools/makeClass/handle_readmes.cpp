@@ -59,7 +59,7 @@ string_q get_links(const CCommandOption& ep) {
         // cout << "X: 4: " << ret << endl;
     }
 
-    string_q gitUrl = "https://github.com/TrueBlocks/trueblocks-core/tree/master/src/";
+    string_q gitUrl = "https://github.com/theQRL/trueblocks-core/tree/master/src/";
     string_q sourceUrl = gitUrl + "apps/chifra/internal";
     string_q testUrl = gitUrl + "dev_tools/testRunner/testCases";
     replace(ret, "[{TESTURL}]", testUrl);

@@ -3,7 +3,7 @@ package filter
 import (
 	"sort"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/index"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/index"
 )
 
 type AppearanceSort int

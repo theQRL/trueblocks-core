@@ -5,7 +5,7 @@
 package globals
 
 import (
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/output"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/output"
 )
 
 func (opts *GlobalOptions) OutputOpts() output.OutputOptions {

@@ -3,9 +3,9 @@ package call
 import (
 	"strings"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/abi"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/parser"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/abi"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/parser"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
 )
 
 type findMode int

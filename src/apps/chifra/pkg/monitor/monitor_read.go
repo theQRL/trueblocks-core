@@ -10,8 +10,8 @@ import (
 	"io"
 	"os"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/file"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/index"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/file"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/index"
 )
 
 // ReadMonitorHeader reads the monitor's header and returns without closing the file

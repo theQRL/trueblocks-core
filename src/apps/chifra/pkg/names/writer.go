@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
 )
 
 var defaultHeader = []string{

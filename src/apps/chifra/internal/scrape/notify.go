@@ -10,8 +10,8 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/config"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/notify"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/config"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/notify"
 )
 
 var ErrConfiguredButNotRunning = fmt.Errorf("listener is configured but not running")

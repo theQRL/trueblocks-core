@@ -1,8 +1,8 @@
 package chunksPkg
 
 import (
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/logger"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/pinning"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/logger"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/pinning"
 )
 
 func (opts *ChunksOptions) HandleUnpin(unused []uint64) error {

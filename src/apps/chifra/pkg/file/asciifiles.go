@@ -10,7 +10,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/logger"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/logger"
 )
 
 func AsciiFileToLines(filename string) []string {

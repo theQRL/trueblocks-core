@@ -4,11 +4,11 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/config"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/history"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/logger"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/manifest"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/utils"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/config"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/history"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/logger"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/manifest"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/utils"
 )
 
 func (opts *InitOptions) HandleDryRun() error {

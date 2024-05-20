@@ -5,8 +5,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/config"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/file"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/config"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/file"
 )
 
 func Append(chain string, tsArray []TimestampRecord) error {

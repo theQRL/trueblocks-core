@@ -6,11 +6,11 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/decode"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/theQRL/go-zond/accounts/abi"
+	"github.com/theQRL/go-zond/common"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/decode"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
 )
 
 func ArticulateFunction(function *types.SimpleFunction, inputData string, outputData string) (err error) {
@@ -51,7 +51,7 @@ func articulateArguments(args abi.Arguments, data string, topics []base.Hash, ab
 	nonIndexed := make(abi.Arguments, 0, len(args))
 
 	// In some cases, `data` can be too short, because only some values are present there.
-	// See: https://github.com/TrueBlocks/trueblocks-core/issues/1366
+	// See: https://github.com/theQRL/trueblocks-core/issues/1366
 	dataLen := len(data) * 4
 	nonIndexedSize := 0
 	for _, nonIndexedArg := range args.NonIndexed() {
@@ -99,7 +99,7 @@ func articulateArguments(args abi.Arguments, data string, topics []base.Hash, ab
 	}
 
 	// Sometimes there are topics, but no indexed parameters:
-	// https://github.com/TrueBlocks/trueblocks-core/issues/1366
+	// https://github.com/theQRL/trueblocks-core/issues/1366
 	if len(topics) == 0 || len(indexed) == 0 {
 		return
 	}

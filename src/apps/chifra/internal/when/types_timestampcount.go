@@ -9,7 +9,7 @@
 package whenPkg
 
 // EXISTING_CODE
-import "github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
+import "github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
 
 // EXISTING_CODE
 

@@ -5,10 +5,10 @@ import (
 	"os"
 	"sync"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/internal/globals"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/output"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/rpc"
 	"github.com/spf13/cobra"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/internal/globals"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/output"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/rpc"
 )
 
 var discardWriter = io.Writer(nil)

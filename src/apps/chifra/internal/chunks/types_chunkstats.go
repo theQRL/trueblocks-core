@@ -12,11 +12,11 @@ package chunksPkg
 import (
 	"os"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/file"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/index"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/tslib"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/utils"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/file"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/index"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/tslib"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/utils"
 )
 
 // EXISTING_CODE

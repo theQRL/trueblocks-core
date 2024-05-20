@@ -16,10 +16,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/cache"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/utils"
-	"github.com/ethereum/go-ethereum/common/hexutil"
+	"github.com/theQRL/go-zond/common/hexutil"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/cache"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/utils"
 )
 
 // EXISTING_CODE

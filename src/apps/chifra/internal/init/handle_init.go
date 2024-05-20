@@ -7,13 +7,13 @@ package initPkg
 import (
 	"fmt"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/config"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/file"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/history"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/logger"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/manifest"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/walk"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/config"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/file"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/history"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/logger"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/manifest"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/walk"
 )
 
 // HandleInit initializes local copy of UnchainedIndex by downloading manifests and chunks

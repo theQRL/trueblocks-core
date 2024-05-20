@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
 	"github.com/alecthomas/participle/v2/lexer"
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/theQRL/go-zond/accounts/abi"
+	"github.com/theQRL/go-zond/common"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
 )
 
 // ContractArgument represents input to the smart contract method call, e.g.

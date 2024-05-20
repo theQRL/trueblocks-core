@@ -9,7 +9,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/logger"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/logger"
 )
 
 type Scraper struct {

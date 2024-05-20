@@ -3,9 +3,9 @@ package pricing
 import (
 	"fmt"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/logger"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/rpc"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/logger"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/rpc"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
 )
 
 // TODO: Much of this reporting could be removed as it's only used for debugging

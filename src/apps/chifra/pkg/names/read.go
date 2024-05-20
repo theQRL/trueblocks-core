@@ -1,8 +1,8 @@
 package names
 
 import (
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
 )
 
 func ReadName(dbType DatabaseType, chain string, address base.Address) (name *types.SimpleName) {

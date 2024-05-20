@@ -1,5 +1,5 @@
 syntax = "proto3";
-option go_package = "github.com/TrueBlocks/trueblocks-core/src/apps/chifra/proto";
+option go_package = "github.com/theQRL/trueblocks-core/src/apps/chifra/proto";
 
 service Names {
     // Search

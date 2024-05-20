@@ -1,10 +1,10 @@
 package scrapePkg
 
 import (
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/config"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/index"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/notify"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/config"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/index"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/notify"
 )
 
 func NotifyChunkWritten(chunk index.Chunk, chunkPath string) (err error) {

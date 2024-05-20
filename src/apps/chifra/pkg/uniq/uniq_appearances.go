@@ -5,10 +5,10 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/rpc"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
-	"github.com/ethereum/go-ethereum/common/hexutil"
+	"github.com/theQRL/go-zond/common/hexutil"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/rpc"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
 )
 
 // AddMiner adds the miner address (for use with post-merge)

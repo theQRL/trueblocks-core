@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/file"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/validate"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/file"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/validate"
 )
 
 func (opts *GlobalOptions) Validate() error {

@@ -7,10 +7,10 @@ import (
 	"math/big"
 	"strconv"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/rpc/query"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/utils"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/rpc/query"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/utils"
 )
 
 // StatePart is a bit mask for querying various parts an address's state
@@ -47,7 +47,7 @@ func (conn *Connection) GetState(fieldBits StatePart, address base.Address, bloc
 		{
 			Key: "balance",
 			Payload: &query.Payload{
-				Method: "eth_getBalance",
+				Method: "zond_getBalance",
 				Params: query.Params{
 					address,
 					fmt.Sprintf("0x%x", blockNumber),
@@ -60,7 +60,7 @@ func (conn *Connection) GetState(fieldBits StatePart, address base.Address, bloc
 		rpcPayload = append(rpcPayload, query.BatchPayload{
 			Key: "nonce",
 			Payload: &query.Payload{
-				Method: "eth_getTransactionCount",
+				Method: "zond_getTransactionCount",
 				Params: query.Params{
 					address,
 					fmt.Sprintf("0x%x", blockNumber),
@@ -73,7 +73,7 @@ func (conn *Connection) GetState(fieldBits StatePart, address base.Address, bloc
 		rpcPayload = append(rpcPayload, query.BatchPayload{
 			Key: "code",
 			Payload: &query.Payload{
-				Method: "eth_getCode",
+				Method: "zond_getCode",
 				Params: query.Params{
 					address,
 					fmt.Sprintf("0x%x", blockNumber),

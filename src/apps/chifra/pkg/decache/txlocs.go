@@ -3,18 +3,18 @@ package decache
 import (
 	"errors"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/cache"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/identifiers"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/rpc"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
-	"github.com/ethereum/go-ethereum"
+	"github.com/theQRL/go-zond"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/cache"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/identifiers"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/rpc"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
 )
 
 func LocationsFromTransactionIds(conn *rpc.Connection, ids []identifiers.Identifier) ([]cache.Locator, error) {
 	locations := make([]cache.Locator, 0)
 	for _, rng := range ids {
 		txIds, err := rng.ResolveTxs(conn.Chain)
-		if err != nil && !errors.Is(err, ethereum.NotFound) {
+		if err != nil && !errors.Is(err, zond.NotFound) {
 			continue
 		}
 		for _, app := range txIds {

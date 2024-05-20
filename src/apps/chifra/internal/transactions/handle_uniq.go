@@ -4,11 +4,11 @@ import (
 	"context"
 	"errors"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/logger"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/output"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/uniq"
-	"github.com/ethereum/go-ethereum"
+	"github.com/theQRL/go-zond"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/logger"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/output"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/uniq"
 )
 
 func (opts *TransactionsOptions) HandleUniq() (err error) {
@@ -30,7 +30,7 @@ func (opts *TransactionsOptions) HandleUniq() (err error) {
 
 		for _, rng := range opts.TransactionIds {
 			txIds, err := rng.ResolveTxs(chain)
-			if err != nil && !errors.Is(err, ethereum.NotFound) {
+			if err != nil && !errors.Is(err, zond.NotFound) {
 				errorChan <- err
 				cancel()
 			}

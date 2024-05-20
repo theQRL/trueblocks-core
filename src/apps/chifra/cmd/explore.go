@@ -11,12 +11,12 @@ package cmd
 import (
 	"os"
 
-	explorePkg "github.com/TrueBlocks/trueblocks-core/src/apps/chifra/internal/explore"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/internal/globals"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/caps"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/file"
-	outputHelpers "github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/output/helpers"
 	"github.com/spf13/cobra"
+	explorePkg "github.com/theQRL/trueblocks-core/src/apps/chifra/internal/explore"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/internal/globals"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/caps"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/file"
+	outputHelpers "github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/output/helpers"
 )
 
 // EXISTING_CODE

@@ -7,11 +7,11 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/decode"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/rpc/query"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/utils"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/decode"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/rpc/query"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/utils"
 )
 
 // erc721SupportsInterfaceData is the data needed to call the ERC-721 supportsInterface function
@@ -39,7 +39,7 @@ func (conn *Connection) GetTokenState(tokenAddress base.Address, hexBlockNo stri
 		{
 			Key: "name",
 			Payload: &query.Payload{
-				Method: "eth_call",
+				Method: "zond_call",
 				Params: query.Params{
 					map[string]any{
 						"to":   tokenAddress,
@@ -52,7 +52,7 @@ func (conn *Connection) GetTokenState(tokenAddress base.Address, hexBlockNo stri
 		{
 			Key: "symbol",
 			Payload: &query.Payload{
-				Method: "eth_call",
+				Method: "zond_call",
 				Params: query.Params{
 					map[string]any{
 						"to":   tokenAddress,
@@ -65,7 +65,7 @@ func (conn *Connection) GetTokenState(tokenAddress base.Address, hexBlockNo stri
 		{
 			Key: "decimals",
 			Payload: &query.Payload{
-				Method: "eth_call",
+				Method: "zond_call",
 				Params: query.Params{
 					map[string]any{
 						"to":   tokenAddress,
@@ -78,7 +78,7 @@ func (conn *Connection) GetTokenState(tokenAddress base.Address, hexBlockNo stri
 		{
 			Key: "totalSupply",
 			Payload: &query.Payload{
-				Method: "eth_call",
+				Method: "zond_call",
 				Params: query.Params{
 					map[string]any{
 						"to":   tokenAddress,
@@ -92,7 +92,7 @@ func (conn *Connection) GetTokenState(tokenAddress base.Address, hexBlockNo stri
 		{
 			Key: "erc721",
 			Payload: &query.Payload{
-				Method: "eth_call",
+				Method: "zond_call",
 				Params: query.Params{
 					map[string]any{
 						"to":   tokenAddress,
@@ -155,7 +155,7 @@ func (conn *Connection) GetBalanceAtToken(token, holder base.Address, hexBlockNo
 	payloads := []query.BatchPayload{{
 		Key: "balance",
 		Payload: &query.Payload{
-			Method: "eth_call",
+			Method: "zond_call",
 			Params: query.Params{
 				map[string]any{
 					"to":   token.Hex(),

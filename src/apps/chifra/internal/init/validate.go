@@ -5,9 +5,9 @@
 package initPkg
 
 import (
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/config"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/history"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/validate"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/config"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/history"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/validate"
 )
 
 func (opts *InitOptions) validateInit() error {

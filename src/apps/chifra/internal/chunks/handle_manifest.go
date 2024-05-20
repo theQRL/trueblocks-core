@@ -7,9 +7,9 @@ package chunksPkg
 import (
 	"context"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/manifest"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/output"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/manifest"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/output"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
 )
 
 var sourceMap = map[bool]manifest.Source{

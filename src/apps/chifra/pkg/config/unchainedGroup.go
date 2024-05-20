@@ -4,8 +4,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/history"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/theQRL/go-zond/crypto"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/history"
 )
 
 type unchainedGroup struct {

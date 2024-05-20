@@ -10,10 +10,10 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/config"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/logger"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/rpc/query"
-	"github.com/ethereum/go-ethereum/ethclient"
+	"github.com/theQRL/go-zond/zondclient"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/config"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/logger"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/rpc/query"
 )
 
 // GetClientVersion returns the version of the client
@@ -72,9 +72,9 @@ func (conn *Connection) GetLatestBlockNumber() uint64 {
 // TODO: overran the number of TPC connection the OS would create (on a Mac). Since then, we now
 // TODO: open the connection once and just use it allowing the operating system to clean it up
 var clientMutex sync.Mutex
-var perProviderClientMap = map[string]*ethclient.Client{}
+var perProviderClientMap = map[string]*zondclient.Client{}
 
-func (conn *Connection) getClient() (*ethclient.Client, error) {
+func (conn *Connection) getClient() (*zondclient.Client, error) {
 	provider := config.GetChain(conn.Chain).RpcProvider
 	if provider == "" || provider == "https://" {
 		var noProvider = `
@@ -93,7 +93,7 @@ func (conn *Connection) getClient() (*ethclient.Client, error) {
 	defer clientMutex.Unlock()
 
 	if perProviderClientMap[provider] == nil {
-		ec, err := ethclient.Dial(provider)
+		ec, err := zondclient.Dial(provider)
 		if err != nil || ec == nil {
 			logger.Error("Missdial("+provider+"):", err)
 			logger.Fatal("")

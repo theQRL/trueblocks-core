@@ -45,12 +45,12 @@
       channelCount = 20
   [chains.mainnet]
     chain = "mainnet"
-    chainId = "1"
+    chainId = "0x7e7e"
     ipfsGateway = "https://ipfs.unchainedindex.io/ipfs/"
     localExplorer = "http://localhost:1234/"
     remoteExplorer = "https://etherscan.io/"
     rpcProvider = "http://localhost:8545"
-    symbol = "ETH"
+    symbol = "QRL"
     [chains.mainnet.scrape]
       appsPerChunk = 2000000
       snapToGrid = 100000

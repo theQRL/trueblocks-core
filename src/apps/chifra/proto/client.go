@@ -7,7 +7,7 @@ import (
 	"path"
 	"time"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/file"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/file"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )

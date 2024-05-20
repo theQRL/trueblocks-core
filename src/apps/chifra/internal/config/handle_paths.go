@@ -3,9 +3,9 @@ package configPkg
 import (
 	"fmt"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/colors"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/config"
 	"github.com/bykof/gostradamus"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/colors"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/config"
 )
 
 // HandlePaths handles the paths command for the command line. Returns error only as per cobra.

@@ -12,11 +12,11 @@ package listPkg
 import (
 	"net/http"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/internal/globals"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/logger"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/monitor"
-	outputHelpers "github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/output/helpers"
 	"github.com/spf13/cobra"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/internal/globals"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/logger"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/monitor"
+	outputHelpers "github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/output/helpers"
 )
 
 // EXISTING_CODE

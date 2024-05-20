@@ -7,10 +7,8 @@ package rpc
 import (
 	"strings"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/utils"
-	"github.com/ethereum/go-ethereum/common"
-	ensGo "github.com/wealdtech/go-ens/v3"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/utils"
 )
 
 // GetEnsAddresses converts an array of strings, if they contains .eth, into addresses. Note, we take
@@ -38,10 +36,10 @@ func (conn *Connection) GetEnsAddresses(addrs []string) (out []string, found boo
 		defer ec.Close()
 		for _, term := range addrs {
 			if strings.Contains(term, ".eth") {
-				if val, err := ensGo.Resolve(ec, term); err == nil && len(val) > 0 {
-					term = val.Hex()
-					found = true
-				}
+				// if val, err := ensGo.Resolve(ec, term); err == nil && len(val) > 0 {
+				// 	term = val.Hex()
+				// 	found = true
+				// }
 			}
 			out = append(out, utils.LowerIfHex(term))
 		}
@@ -62,9 +60,9 @@ func (conn *Connection) GetEnsAddress(addrOrEns string) (string, bool) {
 		return "", false
 	} else {
 		defer ec.Close()
-		if val, err := ensGo.Resolve(ec, addrOrEns); err == nil && len(val) > 0 {
-			return utils.LowerIfHex(val.Hex()), true
-		}
+		// if val, err := ensGo.Resolve(ec, addrOrEns); err == nil && len(val) > 0 {
+		// 	return utils.LowerIfHex(val.Hex()), true
+		// }
 		return utils.LowerIfHex(addrOrEns), false
 	}
 }
@@ -81,9 +79,9 @@ func (conn *Connection) GetEnsName(addr string) (string, bool) {
 		return "", false
 	} else {
 		defer ec.Close()
-		if val, err := ensGo.ReverseResolve(ec, common.HexToAddress(addr)); err == nil && len(val) > 0 {
-			return utils.LowerIfHex(val), true
-		}
+		// if val, err := ensGo.ReverseResolve(ec, common.HexToAddress(addr)); err == nil && len(val) > 0 {
+		// 	return utils.LowerIfHex(val), true
+		// }
 		return utils.LowerIfHex(addr), false
 	}
 }

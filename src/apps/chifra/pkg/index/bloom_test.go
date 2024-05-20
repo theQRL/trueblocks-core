@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
-	"github.com/ethereum/go-ethereum/common/hexutil"
+	"github.com/theQRL/go-zond/common/hexutil"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
 )
 
 func Test_Bloom(t *testing.T) {

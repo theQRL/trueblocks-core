@@ -17,9 +17,9 @@ import (
 	"io"
 	"os"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/config"
 	shell "github.com/ipfs/go-ipfs-api"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/config"
 )
 
 // The Chunk data structure consists of three parts. A FileRange, a Index structure, and a Bloom that

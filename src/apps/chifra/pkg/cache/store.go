@@ -8,9 +8,9 @@ import (
 	"path"
 	"sync"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/cache/locations"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/logger"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/sigintTrap"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/cache/locations"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/logger"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/sigintTrap"
 )
 
 // In verbose mode we print cache errors. It's useful for debugging.

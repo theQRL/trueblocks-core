@@ -8,9 +8,9 @@ import (
 	"context"
 	"errors"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/output"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
-	"github.com/ethereum/go-ethereum"
+	"github.com/theQRL/go-zond"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/output"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
 )
 
 func (opts *BlocksOptions) HandleTraces() error {
@@ -22,7 +22,7 @@ func (opts *BlocksOptions) HandleTraces() error {
 			blockNums, err := br.ResolveBlocks(chain)
 			if err != nil {
 				errorChan <- err
-				if errors.Is(err, ethereum.NotFound) {
+				if errors.Is(err, zond.NotFound) {
 					continue
 				}
 				cancel()
@@ -34,7 +34,7 @@ func (opts *BlocksOptions) HandleTraces() error {
 				traces, err = opts.Conn.GetTracesByBlockNumber(bn)
 				if err != nil {
 					errorChan <- err
-					if errors.Is(err, ethereum.NotFound) {
+					if errors.Is(err, zond.NotFound) {
 						continue
 					}
 					cancel()

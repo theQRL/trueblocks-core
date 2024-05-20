@@ -3,8 +3,8 @@ package tslib
 import (
 	"strings"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
 	"github.com/bykof/gostradamus"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
 )
 
 // FromBnToTs returns a chain-specific Linux timestamp given a block number

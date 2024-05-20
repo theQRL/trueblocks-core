@@ -5,8 +5,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/file"
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/theQRL/go-zond/common"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/file"
 )
 
 type Header struct {

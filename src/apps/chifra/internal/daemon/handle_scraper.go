@@ -1,6 +1,6 @@
 package daemonPkg
 
-import scrapePkg "github.com/TrueBlocks/trueblocks-core/src/apps/chifra/internal/scrape"
+import scrapePkg "github.com/theQRL/trueblocks-core/src/apps/chifra/internal/scrape"
 
 // HandleScraper starts and manages the scraper process
 func (opts *DaemonOptions) HandleScraper() error {

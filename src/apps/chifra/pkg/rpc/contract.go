@@ -7,10 +7,10 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/rpc/query"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/theQRL/go-zond/common"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/rpc/query"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
 )
 
 var ErrNotAContract = errors.New("not a contract")
@@ -65,7 +65,7 @@ func (conn *Connection) GetContractProxyAt(address base.Address, blockNumber bas
 	} else {
 		defer ec.Close()
 
-		method := "eth_call"
+		method := "zond_call"
 		params := query.Params{
 			map[string]any{
 				"to": address,

@@ -6,12 +6,12 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/base"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/prefunds"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/rpc/query"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/types"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/utils"
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/theQRL/go-zond/common"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/base"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/prefunds"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/rpc/query"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/types"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/utils"
 )
 
 func (conn *Connection) GetTransactionByNumberAndId(bn base.Blknum, txid uint64) (tx *types.SimpleTransaction, err error) {
@@ -348,13 +348,13 @@ var (
 )
 
 func (conn *Connection) getTransactionRaw(blkHash base.Hash, txHash base.Hash, bn base.Blknum, txid uint64) (raw *types.RawTransaction, err error) {
-	method := "eth_getTransactionByBlockNumberAndIndex"
+	method := "zond_getTransactionByBlockNumberAndIndex"
 	params := query.Params{fmt.Sprintf("0x%x", bn), fmt.Sprintf("0x%x", txid)}
 	if txHash != notAHash {
-		method = "eth_getTransactionByHash"
+		method = "zond_getTransactionByHash"
 		params = query.Params{txHash.Hex()}
 	} else if blkHash != notAHash {
-		method = "eth_getTransactionByBlockHashAndIndex"
+		method = "zond_getTransactionByBlockHashAndIndex"
 		params = query.Params{blkHash.Hex(), fmt.Sprintf("0x%x", txid)}
 	}
 

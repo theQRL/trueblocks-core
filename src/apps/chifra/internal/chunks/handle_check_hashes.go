@@ -7,7 +7,7 @@ package chunksPkg
 import (
 	"fmt"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/manifest"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/manifest"
 )
 
 // CheckHashes looks at all the hashes in both the locally cached manifest and the manifest retrieved from

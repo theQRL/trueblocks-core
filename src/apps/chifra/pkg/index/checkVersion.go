@@ -7,9 +7,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/colors"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/config"
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/file"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/colors"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/config"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/file"
 )
 
 var ErrNotInitialized = errors.New("index not initialized")
@@ -51,7 +51,7 @@ func IsInitialized(chain, required string) error {
 	Manifest version: {WANT}
 	Error:            {%w}
 
-	See https://github.com/TrueBlocks/trueblocks-core/blob/develop/src/other/migrations/README-v2.0.0.md.
+	See https://github.com/theQRL/trueblocks-core/blob/develop/src/other/migrations/README-v2.0.0.md.
 `
 			msg = colors.ColoredWith(msg, colors.Yellow)
 			msg = strings.Replace(msg, "WHICH", fileName, -1)

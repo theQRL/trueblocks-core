@@ -7,8 +7,8 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/TrueBlocks/trueblocks-core/src/apps/chifra/pkg/cache"
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/theQRL/go-zond/common"
+	"github.com/theQRL/trueblocks-core/src/apps/chifra/pkg/cache"
 )
 
 // Hash is a wrapper for go-ethereum's Hash type that always
